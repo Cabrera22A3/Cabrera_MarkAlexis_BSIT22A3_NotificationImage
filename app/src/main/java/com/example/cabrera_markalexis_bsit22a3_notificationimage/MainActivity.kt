@@ -31,7 +31,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             Cabrera_MarkAlexis_BSIT22A3_NotificationImageTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -45,6 +44,9 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting() {
+    //gumamit ng columns and rows para maayos yung layout ng image at text
+    //vertical arrangement para ma center ung lahat na nasa column
+    //chorizontal allignment para mag align ung content pa higa
     Column (
         modifier = Modifier
             .fillMaxSize()
@@ -55,12 +57,12 @@ fun Greeting() {
         Image(
             painter = painterResource(R.drawable.checkedpic1),
             contentDescription = null,
-            contentScale = ContentScale.FillWidth,
-            modifier = Modifier.padding(start = 60.dp, end = 60.dp).fillMaxWidth()
+            contentScale = ContentScale.FillWidth, //para ma fill ng image yung pinaka width ng device
+            modifier = Modifier.padding(start = 60.dp, end = 60.dp).fillMaxWidth()//padding para maisaayos kung tama ba yung sukat sa width
         )
         Text(
             text = "All tasks completed",
-            fontWeight = FontWeight.Bold,
+            fontWeight = FontWeight.Bold,// para patabain yung font
             modifier = Modifier.padding(top = 24.dp, bottom = 8.dp)
         )
         Text(
